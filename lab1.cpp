@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 int main() 
@@ -19,5 +20,5 @@ int main()
 	std::cout << "Initial number / 2: " << number / 2 << std::endl;
 	return 0;
 }
-
+*/
 
