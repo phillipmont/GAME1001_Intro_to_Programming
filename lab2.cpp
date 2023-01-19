@@ -2,6 +2,8 @@
 
 int main()
 {
+	//this program is cool
+
 	double number1 = 0.0;
 	double number2 = 0.0;
 	double number3 = 0.0;
