@@ -1,9 +1,8 @@
 #include <iostream>
 
-
 int main() 
 {
-	std::cout << "Hello world" << std::endl;
+	std::cout << "Welcome to intro to Programming" << std::endl;
 	return 0;
 }
 
