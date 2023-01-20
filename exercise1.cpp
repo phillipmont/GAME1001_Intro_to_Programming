@@ -27,17 +27,16 @@ int main()
 	std::cout << "Enter number of donuts sold:" << std::endl;
 	std::cin >> donutSold;
 
-	std::cout << std::endl << std::endl;
-	std::cout << "SUMMARY" << std::endl << std::endl;
-
 	//Calculations
 	muffinSales = muffinPrice * muffinSold;
 	donutSales = donutPrice * donutSold;
 	totalSold = muffinSold + donutSold;
 	totalSales = muffinSales + donutSales;
 
-
 	//Outputs
+	std::cout << std::endl << std::endl;
+	std::cout << "SUMMARY" << std::endl << std::endl;
+
 	std::cout << "Muffin price: $" << muffinPrice << std::endl << std::endl;
 	std::cout << "Quantity of muffins sold: " << muffinSold << std::endl << std::endl;
 	std::cout << "Muffin sales: $" << muffinSales << std::endl << std::endl;
