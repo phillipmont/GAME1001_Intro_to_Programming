@@ -26,7 +26,7 @@ int main()
 	std::cin >> donutSold;
 
 	std::cout << std::endl << std::endl;
-	std::cout << "SUMMARY" << std::endl;
+	std::cout << "SUMMARY" << std::endl << std::endl;
 
 	//Calculations
 	muffinSales = muffinPrice * muffinSold;
@@ -36,14 +36,14 @@ int main()
 
 
 	//Outputs
-	std::cout << "Muffin Price: $" << muffinPrice << std::endl;
-	std::cout << "Quantity of muffins sold: " << muffinSold << std::endl;
-	std::cout << "Donut price: $" << donutPrice << std::endl;
-	std::cout << "Quantity of donuts sold: " << donutSold << std::endl;
-	std::cout << "Muffin sales: $" << muffinSales << std::endl;
-	std::cout << "Donut sales: $" << donutSales << std::endl;
-	std::cout << "A total of " << totalSold << " items were sold." << std::endl;
-	std::cout << "$" << totalSales << " was collected in sales." << std::endl;
+	std::cout << "Muffin price: $" << muffinPrice << std::endl << std::endl;
+	std::cout << "Quantity of muffins sold: " << muffinSold << std::endl << std::endl;
+	std::cout << "Muffin sales: $" << muffinSales << std::endl << std::endl;
+	std::cout << "Donut price: $" << donutPrice << std::endl << std::endl;
+	std::cout << "Quantity of donuts sold: " << donutSold << std::endl << std::endl;
+	std::cout << "Donut sales: $" << donutSales << std::endl << std::endl;
+	std::cout << "A total of " << totalSold << " items were sold." << std::endl << std::endl;
+	std::cout << "$" << totalSales << " was collected in sales.";
 
 	return 0;
 }
