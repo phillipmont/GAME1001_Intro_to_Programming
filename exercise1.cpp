@@ -13,6 +13,8 @@ int main()
 	float totalSales = 0.0f;
 
 	//Input from user
+	std::cout << "Welcome!" << std::endl << std::endl;
+
 	std::cout << "Enter muffin price ($):" << std::endl;
 	std::cin >> muffinPrice;
 
