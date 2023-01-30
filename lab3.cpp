@@ -44,7 +44,7 @@ int main()
 	if (playerHealth <= 0 || monsterHealth <= 0)
 	{
 		if (playerHealth <= 0 && monsterHealth <= 0)
-			cout << "Both parties lost the fight" << endl;
+			cout << "Everyone is dead :(" << endl;
 		else if (monsterHealth <= 0)
 			cout << "Player won the fight!" << endl;
 		else
