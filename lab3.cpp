@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 using namespace std;
@@ -65,3 +66,5 @@ int main()
 	//double number1, number2, number3;
 	//std::cin >> number1 >> number2 >> number3;
 	//std::cout << number1 << number2 << number3;
+
+	*/

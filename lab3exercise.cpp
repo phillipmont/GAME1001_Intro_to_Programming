@@ -18,18 +18,30 @@ using namespace std;
 int main()
 {
 
+	const int INSPECTION_FEE = 75;
+	const int LABOUR_COST = 75;
+	const int MINIMUM_CHARGE = 120;
+	
+	int hoursLabour = 0;
+	cout << "Enter number of hours worked" << endl;
+	cin >> hoursLabour;
+	cout << endl;
 
+	float costParts = 0;
+	cout << "Enter cost of parts ($)" << endl;
+	cin >> costParts;
+	cout << endl << endl;
 
+	float totalCharge;
 
+	if (hoursLabour > 0)
+	{
+		totalCharge = (LABOUR_COST * hoursLabour);
+		if (totalCharge < 120) totalCharge = 120;
+	}
+	else totalCharge = INSPECTION_FEE;
 
-
-
-
-
-
-
-
-
+	cout << "Total charge: $" << totalCharge + costParts;
 
 
 	return 0;
