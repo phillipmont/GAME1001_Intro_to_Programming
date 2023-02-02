@@ -30,5 +30,11 @@
     <ClCompile Include="lab3exercise.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GAME1001_LabTest1_Phillip_Monteiro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="week3LabAssignmentPart1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

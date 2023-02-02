@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 using namespace std;
@@ -14,26 +15,27 @@ int main()
 		 << "Welcome to Dusty's Dent Repair!" << endl << endl;
 
 	int hoursLabour = 0;
-	cout << "Enter the number of labour hours" << endl;
+	cout << "Enter the number of labour hours (whole numbers only)" << endl;
 	cin >> hoursLabour;
 	cout << endl;
 
-	float costParts = 0;
+	float costParts = 0.0f;
 	cout << "Enter the total cost of parts ($)" << endl;
 	cin >> costParts;
 	cout << endl;
 
-	float totalLabour;
+	float totalLabour = 0.0f;
 
 	if (hoursLabour > 0)
 	{
 		totalLabour = (LABOUR_COST * hoursLabour);
-		if (totalLabour < 120) totalLabour = 120;
+		if (totalLabour < 120) totalLabour = 120.0f;
 	}
 	else totalLabour = INSPECTION_FEE;
 
-	cout << "========================" << endl << endl
+	cout << "========================================" << endl << endl
 		 << "TOTAL CHARGE: $" << totalLabour + costParts;
 
 	return 0;
 }
+*/

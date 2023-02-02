@@ -132,6 +132,8 @@
     <ClCompile Include="lab2.cpp" />
     <ClCompile Include="lab3.cpp" />
     <ClCompile Include="lab3exercise.cpp" />
+    <ClCompile Include="GAME1001_LabTest1_Phillip_Monteiro.cpp" />
+    <ClCompile Include="week3LabAssignmentPart1.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
