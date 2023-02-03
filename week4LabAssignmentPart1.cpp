@@ -11,13 +11,17 @@ int main()
 {
 	const float OVERTIME_MULTIPLIER = 1.5f;
 	
+	cout << "Welcome! Please follow the instructions below to calculate your total weekly salary." << endl << endl;
+
 	double hoursWorked = 0.0;
-	cout << "Enter number of hours worked" << endl;
+	cout << "Enter the number of hours worked: ";
 	cin >> hoursWorked;
+	cout << endl;
 
 	double hourlyWage = 0.0;
-	cout << "Enter hourly wage ($)" << endl;
+	cout << "Enter hourly wage ($): ";
 	cin >> hourlyWage;
+	cout << endl;
 	
 	double totalSalary = 0.0;
 	
