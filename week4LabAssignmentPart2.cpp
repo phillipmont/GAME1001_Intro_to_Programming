@@ -1,5 +1,5 @@
 //Phillip Monteiro
-//Week 3 lab assignment Part 2
+//Week 4 lab assignment Part 2
 //Feb 2, 2023
 
 #include <iostream>

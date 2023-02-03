@@ -1,6 +1,5 @@
-/*
 //Phillip Monteiro
-//Week 3 lab assignment Part 1
+//Week 4 lab assignment Part 1
 //Feb 2, 2023
 
 #include <iostream>
@@ -32,4 +31,3 @@ int main()
 
 	return 0;
 }
-*/
