@@ -39,5 +39,8 @@
     <ClCompile Include="week4LabAssignmentPart2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="lab4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

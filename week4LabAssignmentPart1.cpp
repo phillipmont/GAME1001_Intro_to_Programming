@@ -1,3 +1,4 @@
+/*
 //Phillip Monteiro
 //Week 4 lab assignment Part 1
 //Feb 2, 2023
@@ -34,4 +35,4 @@ int main()
 	cout << "Total weekly salary: $" << totalSalary;
 
 	return 0;
-}
+}//*/

@@ -1,3 +1,4 @@
+/*
 //Phillip Monteiro
 //Week 4 lab assignment Part 2
 //Feb 2, 2023
@@ -39,4 +40,4 @@ int main()
 	cout << endl << "Your final sale price is $" << finalPrice;
 
 	return 0;
-}
+}//*/
