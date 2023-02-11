@@ -136,6 +136,7 @@
     <ClCompile Include="lab4.cpp" />
     <ClCompile Include="week4LabAssignmentPart1.cpp" />
     <ClCompile Include="week4LabAssignmentPart2.cpp" />
+    <ClCompile Include="week5LabAssignment.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,4 +1,4 @@
-///*
+/*
 #include <iostream>
 
 using namespace std;
@@ -7,6 +7,18 @@ int main()
 {
 	cout << "Welcome to Battle Simulator 3000" << endl
 		 << "Preparing for battle..." << endl << endl;
+
+	int turnCount = 0;
+	cout << endl << "Please enter the number of turns: ";
+	cin >> turnCount;
+
+	const int playerMaxHealth = playerHealth;
+	const int monsterMaxHealth = monsterHealth;
+
+	for (int turn = 0; turn < turnCount; turn++)
+	{
+
+	}
 
 	// Input player health
 	int playerHealth = 0;
@@ -28,7 +40,7 @@ int main()
 	cout << "Enter monster's damage: " << endl;
 	cin >> monsterDamage;
 
-	while (playerHealth > 0 && monsterHealth > 0)
+	for (int turn = 0; turn < turnCount; turn++)
 	{
 		// Monster attacks player
 		cout << "The monster fearsomely lunges at the player!" << endl;
@@ -42,6 +54,21 @@ int main()
 		cout << "The monster took " << playerDamage << " damage. "
 			<< "Monster Health: " << monsterHealth << endl;
 	}
+
+	//while (playerHealth > 0 && monsterHealth > 0)
+	//{
+	//	// Monster attacks player
+	//	cout << "The monster fearsomely lunges at the player!" << endl;
+	//	playerHealth -= monsterDamage;
+	//	cout << "The player took " << monsterDamage << " damage. "
+	//		<< "Player Health: " << playerHealth << endl;
+
+	//	// Player attacks monster
+	//	cout << "The player fights back in retaliation!" << endl;
+	//	monsterHealth -= playerDamage;
+	//	cout << "The monster took " << playerDamage << " damage. "
+	//		<< "Monster Health: " << monsterHealth << endl;
+	//}
 
 	// Win condition: player or monster health must = 0
 	if (playerHealth <= 0 || monsterHealth <= 0)
