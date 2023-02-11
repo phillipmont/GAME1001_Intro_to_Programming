@@ -11,13 +11,12 @@ using std::endl;
 
 int main()
 {
-
 	double W = 0;
-	cout << "What is the current water level? (litres)" << endl;
+	cout << "What is the starting water level? (L)" << endl;
 	cin >> W;
 
 	double P = 0;
-	cout << "What percentage of water is being taken?" << endl;
+	cout << "What percentage of water is being taken? (%)" << endl;
 	cin >> P;
 	
 	double take = 0;
@@ -31,4 +30,4 @@ int main()
 	}
 
 	return 0;
-}//*/
+}//*//
