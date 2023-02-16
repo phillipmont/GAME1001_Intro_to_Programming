@@ -134,9 +134,14 @@
     <ClCompile Include="lab3exercise.cpp" />
     <ClCompile Include="GAME1001_LabTest1_Phillip_Monteiro.cpp" />
     <ClCompile Include="lab4.cpp" />
+    <ClCompile Include="lab5.cpp" />
     <ClCompile Include="week4LabAssignmentPart1.cpp" />
     <ClCompile Include="week4LabAssignmentPart2.cpp" />
     <ClCompile Include="week5LabAssignment.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DecimalMath.h" />
+    <ClInclude Include="IntegerMath.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Lab 5">
+      <UniqueIdentifier>{f4a7cd7a-409d-4737-a10a-8e7bab354ec8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lab2.cpp">
@@ -45,5 +48,16 @@
     <ClCompile Include="week5LabAssignment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="lab5.cpp">
+      <Filter>Lab 5</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IntegerMath.h">
+      <Filter>Lab 5</Filter>
+    </ClInclude>
+    <ClInclude Include="DecimalMath.h">
+      <Filter>Lab 5</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
