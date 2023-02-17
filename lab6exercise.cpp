@@ -17,7 +17,6 @@ using namespace std;
 
 int number1 = 0;
 int number2 = 0;
-int answer = 0;
 
 int CompNumbers()
 {
@@ -36,13 +35,16 @@ int main()
 	cout << "Enter the second number:\n";
 	cin >> number2;
 
-	answer = CompNumbers();
+	int answer = CompNumbers();
 
 	if (answer == 0)
 		cout << "The numbers are the same: " << number1;
 	else if (answer == 1)
 		cout << "The first number is larger: " << number1;
-
-	return 0;
+	else if (answer == -1)
+		cout << "The second number is larger: " << number2;
+	else cout << "Error";
+	
+		return 0;
 }
 //*/
