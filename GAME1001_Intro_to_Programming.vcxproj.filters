@@ -51,6 +51,9 @@
     <ClCompile Include="lab5.cpp">
       <Filter>Lab 5</Filter>
     </ClCompile>
+    <ClCompile Include="lab6exercise.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntegerMath.h">
