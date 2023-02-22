@@ -139,6 +139,7 @@
     <ClCompile Include="week4LabAssignmentPart1.cpp" />
     <ClCompile Include="week4LabAssignmentPart2.cpp" />
     <ClCompile Include="week5LabAssignment.cpp" />
+    <ClCompile Include="week6Assignment1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DecimalMath.h" />
