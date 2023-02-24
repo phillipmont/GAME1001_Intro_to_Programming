@@ -5,36 +5,44 @@
 
 
 #include <iostream>
+#include <fstream>
+#include <string>
 
 using namespace std;
 
+int playerScore = 0;
+int computerScore = 0;
+char playerChoice;
+char computerChoice;
+
 char getComputerChoice() 
 {
-    srand(time(0));
-    int num = rand() % 3 + 1;
-
-    if (num == 1) return 'r';
-    if (num == 2) return 'p';
-    if (num == 3) return 's';
+    srand(time(NULL));
+    int choice = rand() % 3 + 1;
+    
+    if (choice == 1) return 'r';
+    if (choice == 2) return 'p';
+    if (choice == 3) return 's';
 }
 
 char getPlayerChoice()
 {
     char pChoice;
-    cout << "Welcome to Rock, Paper, Scissors!" << endl;
-    cout << "Choose one of the following options" << endl;
+
+    cout << "please choose one of the following options:" << endl;
     cout << "(r) for rock " << endl << "(p) for paper" << endl << "(s) for scissors " << endl;
     cin >> pChoice;
 
     while (pChoice != 'r' && pChoice != 'p' && pChoice != 's')
     {
-        cout << "Please enter one of the following options only. " << endl;
+        cout << "Invalid entry. Please enter one of the following options only: " << endl;
         cout << "(r) for rock " << endl << "(p) for paper" << endl << "(s) for scissors " << endl;
         cin >> pChoice;
     }
+    return pChoice;
 }
 
-void showPlayerChoice(char choice)
+void showChoice(char choice)
 {
     if (choice == 'r') cout << "Rock" << endl;
     if (choice == 'p') cout << "Paper" << endl;
@@ -46,41 +54,67 @@ void determineWinner(char player, char computer)
     if ((player == 'r' && computer == 's') || (player == 'p' && computer == 'r') || (player == 's' && computer == 'p'))
     {
         std::cout << "You win!\n";
-        ++playerWins;
+        ++playerScore;
     }
-    else if ((player == 'r' && computer == 2) || (player == 2 && computer == 3) || (player == 3 && computer == 1))
+    else if ((player == 'r' && computer == 'p') || (player == 'p' && computer == 's') || (player == 's' && computer == 'r'))
     {
-        std::cout << "Computer win!\n";
-        ++computerWins;
+        std::cout << "Oh no! The computer wins :(\n";
+        ++computerScore;
     }
     else if (player == computer)
     {
-        std::cout << "Tied\n";
+        std::cout << "Draw...\n";
     }
     else
     {
-        std::cout << "Error, please use and input between 1-3\n";
+        std::cout << "Error, invalid entry.";
     }
-    std::cout << "Your score is currently " << playerWins << ", Computer score is " << computerWins << "\n";
-    std::cout << "============================================================================\n";
 }
 
 
-
-
-
-
-
-
-
-
-
-
-while (playagain == y)
+int main()
 {
-    ++gamesCount;
+    string playerName;
+   
+    cout << "Welcome to Rock, Paper, Scissors!" << endl;
+    cout << "Please enter your first name." << endl;
+    cin >> playerName;
+    cout << endl << "Welcome " << playerName << " !";
+
+    char playAgain;
+
+    do
+    {
+       computerChoice = getComputerChoice();
+       playerChoice = getPlayerChoice();
+
+       cout << "You chose ";
+       showChoice(playerChoice);
+       cout << endl;
+       cout << "The computer chose ";
+       showChoice(computerChoice);
+       cout << endl;
+
+       determineWinner(playerChoice, computerChoice);
+
+       cout << "Scoreboard\n"
+            << "-----------\n"
+            << playerName << ": " << playerScore << endl
+            << "Comupter: " << computerScore << endl << endl;
+
+        do
+        {
+            cout << "Play again? (Y/N)\n";
+            cin >> playAgain;
+
+            if (playAgain != 'Y' && playAgain != 'y' && playAgain != 'N' && playAgain != 'n')
+                cout << "Invalid Entry. Please enter 'Y' or 'N'\n" << endl;
+
+        } while (playAgain != 'Y' && playAgain != 'y' && playAgain != 'N' && playAgain != 'n');
 
 
+    } while (playAgain == 'Y' || playAgain == 'y'); //Play again loop
 
-    
+    return 0;
 }
+
