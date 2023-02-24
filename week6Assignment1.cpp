@@ -3,7 +3,6 @@
 //Week 5 lab assignment
 //Feb 22, 2023
 
-
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -12,6 +11,7 @@ using namespace std;
 
 int playerScore = 0;
 int computerScore = 0;
+int drawScore = 0;
 char playerChoice;
 char computerChoice;
 
@@ -65,6 +65,7 @@ void determineWinner(char player, char computer)
     else if (player == computer)
     {
         std::cout << "Draw...\n";
+        ++drawScore;
     }
     else
     {
@@ -72,14 +73,57 @@ void determineWinner(char player, char computer)
     }
 }
 
-
 int main()
 {
+    string userName;
+    string fileName;
+
+    do
+    {
+        cout << "Enter username: ";
+        getline(cin, userName);
+        if (userName.length() < 8)
+        {
+            cout << "Invlaid entry. Username must be at least 8 characters." << endl;
+        }
+    } while (userName.length() < 8);
+
+    fileName = userName + ".txt";
+    
+    ifstream inFile(fileName);
+    if (inFile.is_open())
+    {
+            char response;
+    
+            do
+            {
+                cout << "Username already exists. Do you want to proceed and load save data for " << userName << "? (y/n)" << endl;
+                cin >> response;
+
+                if (response != 'y' && response != 'n') cout << "Invalid Entry. Please enter 'y' or 'n'\n" << endl;
+
+            } while (response != 'y' && response != 'n');
+
+            if (response == 'y')
+            {
+                inFile >> playerScore, computerScore, drawScore;
+                cout << "Welcome back " << userName << ". Your save file has been loaded." << endl;
+            }
+            else if (response == 'n') return 0; //Close program if user does not want to proceed
+    }
+    else
+    {
+        cout << userName << " username not found. Now creating new save file..." << endl << endl;
+        ofstream outfile(fileName);
+    }
+
+
+
     string playerName;
    
-    cout << "Welcome to Rock, Paper, Scissors!" << endl << endl;
-    cout << "Please enter your first name." << endl;
-    cin >> playerName;
+    cout << endl << endl << "Welcome to Rock, Paper, Scissors!" << endl << endl;
+    cout << "Please enter your name." << endl;
+    getline(cin, playerName);
     cout << endl << "Welcome " << playerName << "! Prepare to play..." << endl << endl;
 
     char playAgain;
@@ -93,8 +137,6 @@ int main()
              << "Round " << gameCounter << endl
              << "========\n" << endl;
         
-        
-
         computerChoice = getComputerChoice();
         playerChoice = getPlayerChoice();
 
@@ -112,22 +154,22 @@ int main()
         cout << "Scoreboard\n"
              << "-----------\n"
              << playerName << ": " << playerScore << endl
-             << "Computer: " << computerScore << endl << endl;
+             << "Computer: " << computerScore << endl 
+             << "Draw: " << drawScore << endl << endl;
         
          do
          {
-             cout << "Play again? (Y/N)\n";
+             cout << "Play again? (y/n)\n";
              cin >> playAgain;
         
-             if (playAgain != 'Y' && playAgain != 'y' && playAgain != 'N' && playAgain != 'n')
-                 cout << "Invalid Entry. Please enter 'Y' or 'N'\n" << endl;
+             if (playAgain != 'y' && playAgain != 'n') cout << "Invalid Entry. Please enter 'y' or 'n'\n" << endl;
         
-         } while (playAgain != 'Y' && playAgain != 'y' && playAgain != 'N' && playAgain != 'n');
+         } while (playAgain != 'y' && playAgain != 'n');
         
          cout << endl;
 
-    } while (playAgain == 'Y' || playAgain == 'y'); //Play again loop
+    } while (playAgain == 'y'); //Play again loop
 
     return 0;
-}
+} //*/
 
