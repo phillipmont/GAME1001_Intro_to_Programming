@@ -54,7 +54,7 @@
     <ClCompile Include="lab6exercise.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="week6Assignment1.cpp">
+    <ClCompile Include="GAME1001_A1_PhillipMonteiro.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
