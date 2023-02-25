@@ -1,7 +1,7 @@
 ///*
 //Phillip Monteiro
 //Week 5 lab assignment
-//Feb 22, 2023
+//Feb 24, 2023
 
 #include <iostream>
 #include <fstream>
@@ -9,6 +9,7 @@
 
 using namespace std;
 
+string playerName;
 int playerScore = 0;
 int computerScore = 0;
 int drawScore = 0;
@@ -29,15 +30,13 @@ char getPlayerChoice()
 {
     char pChoice;
 
-    cout << "Enter one of the following options:" << endl;
-    cout << "(r) for rock " << endl << "(p) for paper" << endl << "(s) for scissors " << endl;
+    cout << "Enter your choice (r/p/s)" << endl;
     cin >> pChoice;
     cout << endl << endl;
 
     while (pChoice != 'r' && pChoice != 'p' && pChoice != 's')
     {
-        cout << "Invalid entry. Please enter one of the following options only: " << endl;
-        cout << "(r) for rock " << endl << "(p) for paper" << endl << "(s) for scissors " << endl << endl;
+        cout << "Invalid entry. Please enter a valid option (r/p/s) " << endl;
         cin >> pChoice;
     }
     return pChoice;
@@ -48,6 +47,15 @@ void showChoice(char choice)
     if (choice == 'r') cout << "ROCK" << endl;
     if (choice == 'p') cout << "PAPER" << endl;
     if (choice == 's') cout << "SCISSORS" << endl;
+}
+
+void showScoreboard()
+{
+    cout << "Scoreboard\n"
+        << "-----------\n"
+        << playerName << ": " << playerScore << endl
+        << "Computer: " << computerScore << endl
+        << "Draw: " << drawScore << endl << endl;
 }
 
 void determineWinner(char player, char computer)
@@ -100,31 +108,44 @@ int main()
                 cout << "Username already exists. Do you want to proceed and load save data for " << userName << "? (y/n)" << endl;
                 cin >> response;
 
-                if (response != 'y' && response != 'n') cout << "Invalid Entry. Please enter 'y' or 'n'\n" << endl;
+                if (response != 'y' && response != 'n')
+                {
+                    cout << "Invalid Entry. Please enter 'y' or 'n'\n" << endl;
+                }
 
             } while (response != 'y' && response != 'n');
 
             if (response == 'y')
             {
-                inFile >> playerScore, computerScore, drawScore;
-                cout << "Welcome back " << userName << ". Your save file has been loaded." << endl;
+                
+                inFile >> playerScore >> computerScore >> drawScore;
+                inFile.close();
+                cout << endl << "Welcome back " << userName << ". Your save file has been loaded." << endl;
             }
-            else if (response == 'n') return 0; //Close program if user does not want to proceed
+            else
+            {
+                cout << "Save data was not loaded. Please restart the game and use a different username. The game will now close." << endl;
+                system("pause");
+                return 0; //Close program if user does not want to proceed
+            }
     }
     else
     {
-        cout << userName << " username not found. Now creating new save file..." << endl << endl;
-        ofstream outfile(fileName);
+        cout << "Username not found. A new save file will be created for " << userName << endl;
     }
-
-
-
-    string playerName;
    
-    cout << endl << endl << "Welcome to Rock, Paper, Scissors!" << endl << endl;
-    cout << "Please enter your name." << endl;
-    getline(cin, playerName);
-    cout << endl << "Welcome " << playerName << "! Prepare to play..." << endl << endl;
+    cout << endl << endl
+         << "=================================" << endl
+         << "Welcome to Rock, Paper, Scissors!" << endl
+         << "=================================" << endl << endl
+         << "Please enter your first name." << endl;
+    
+    cin >> playerName;
+    
+    cout << endl << "Hello " << playerName << endl
+         << "To play the game, you will need to enter your choices using the keyboard. Your choices are:" << endl
+         << "(r) for rock " << endl << "(p) for paper" << endl << "(s) for scissors " << endl << endl
+         << "Prepare to play..." << endl << endl;
 
     char playAgain;
     int gameCounter = 0;
@@ -151,24 +172,30 @@ int main()
         
         cout << endl << endl;
 
-        cout << "Scoreboard\n"
-             << "-----------\n"
-             << playerName << ": " << playerScore << endl
-             << "Computer: " << computerScore << endl 
-             << "Draw: " << drawScore << endl << endl;
+        showScoreboard();
         
          do
          {
              cout << "Play again? (y/n)\n";
              cin >> playAgain;
         
-             if (playAgain != 'y' && playAgain != 'n') cout << "Invalid Entry. Please enter 'y' or 'n'\n" << endl;
+             if (playAgain != 'y' && playAgain != 'n')
+             {
+                 cout << "Invalid Entry. Please enter 'y' or 'n'\n" << endl;
+             }
         
          } while (playAgain != 'y' && playAgain != 'n');
         
          cout << endl;
 
     } while (playAgain == 'y'); //Play again loop
+
+    ofstream outFile(fileName);
+    outFile << playerScore << " " << computerScore << " " << drawScore;
+    outFile.close();
+
+    cout << "Your progress has been saved." << endl;
+    system("pause");
 
     return 0;
 } //*/
