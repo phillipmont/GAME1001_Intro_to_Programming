@@ -136,6 +136,8 @@
     <ClCompile Include="lab4.cpp" />
     <ClCompile Include="lab5.cpp" />
     <ClCompile Include="lab6exercise.cpp" />
+    <ClCompile Include="lab9.cpp" />
+    <ClCompile Include="Game1001_LT2_PhillipMonteiro.cpp" />
     <ClCompile Include="week4LabAssignmentPart1.cpp" />
     <ClCompile Include="week4LabAssignmentPart2.cpp" />
     <ClCompile Include="week5LabAssignment.cpp" />

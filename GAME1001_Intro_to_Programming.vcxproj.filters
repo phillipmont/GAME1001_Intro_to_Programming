@@ -57,6 +57,12 @@
     <ClCompile Include="GAME1001_A1_PhillipMonteiro.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="lab9.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game1001_LT2_PhillipMonteiro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntegerMath.h">
